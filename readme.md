@@ -1,9 +1,9 @@
-# <center><img src="D:\BlogApp\flaskblog\static\images\sitemap.png">    FlaskBlog App <img src="D:\BlogApp\flaskblog\static\images\sitemap.png"></center>
+# <center><img src="flaskblog/static/images/sitemap.png"> FlaskBlog App <img src="flaskblog/static/images/sitemap.png"></center>
 
 Flask is a <b>Python web framework</b> that provides configuration, conventions, and extensions to get started with web development.
 
 <center>
-<img src="D:\BlogApp\flaskblog\static\images\flask-horizontal.webp">
+<img src="flaskblog/static/images/flask-horizontal.webp">
 </center>
 
 It is classified as a <b>microframework</b> because it does not require particular tools or libraries. Flask’s framework is more explicit than Django’s framework and is also easier to learn because it has less base code to implement a simple web application.
@@ -19,17 +19,17 @@ Flask depends on the <b>Werkzeug WSGI toolkit, the Jinja template engine, and th
 
 ## ScreenShots
 
-<img src="D:\BlogApp\flaskblog\static\readme-img\sc1.png">
+<img src="flaskblog/static/readme-img/sc1.png">
 
 <br>
 <br>
 
-<img src="D:\BlogApp\flaskblog\static\readme-img\sc2.png">
+<img src="flaskblog/static/readme-img/sc2.png">
 
 <br>
 <br>
 
-<img src="D:\BlogApp\flaskblog\static\readme-img\sc3.png">
+<img src="flaskblog/static/readme-img/sc3.png">
 
 
 
