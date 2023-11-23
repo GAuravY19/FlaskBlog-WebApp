@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.FormLabel{
+    font-size: 35px;
+    display: block;
+    margin-left: 35%;
+    margin-top: 20px;
+    font-family: system-ui;
+}
+
+.new{
+    padding-top: 17px;
+}
+
+.form-container {
+    position: relative;
+}
+
+.btn-group-post{
+    margin-top: -170px;
+}
+
+.btn-post:hover{
+    background-color: rgb(179, 241, 112);
+    cursor: pointer;
+    color:white;
+}
+
+
+.btn-group-post{
+    margin-left: 21%;
+    margin-top: -79px;
+}
+
+.btn-post{
+    font-size: 20px;
+    height: 55px;
+    width: 125px;
+    border-radius: 10px;
+    border: 4px solid white;
+    font-family: 'Lora', serif;
+}
+

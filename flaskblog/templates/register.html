@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+    <div class='form-container'>
+        <form action="" method='POST'>
+            {{form.hidden_tag()}}
+            <!--<label class="FormLabel"> Join Today </label>-->
+            <section class='formfields'>
+                <main class='form-username'>
+
+                    {% if form.username.errors %}
+                        {{ form.username(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.username.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.username(class='input-box', placeholder='Username')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-email'>
+                    {% if form.email.errors %}
+                        {{ form.email(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.email.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.email(class='input-box', placeholder='Email')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-password'>
+                    {% if form.password.errors %}
+                        {{ form.password(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.password.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.password(class='input-box' , placeholder='Password')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-confirm-password'>
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.confirm_password.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.confirm_password(class='input-box' , placeholder='Confirm Password')}}
+                    {% endif %}
+                </main>
+            </section>
+
+            <div class='btn-groupr'>
+                {{form.submit(class='btnr')}}
+            </div>
+        </form>
+    </div>
+    <div class='fade'>
+        <small class='text-fade'>Already have an Account?<a href='#' class='sign'> Sign In </a></small>
+    </div>
+
+
+
+{% endblock %}

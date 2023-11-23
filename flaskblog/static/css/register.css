@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300&display=swap');
+/* font-family: 'Merriweather', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-container{
+    height: 500px;
+    width: 50%;
+    background-color: rgb(251, 152, 152);
+    margin-left: 23%;
+    margin-top: 8%;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.FormLabel{
+    font-size: 35px;
+    display: block;
+    margin-left: 42%;
+    margin-top: 20px;
+    font-family: system-ui;
+}
+
+.formfields{
+    height: 400px;
+    width: 500px;
+    margin-left: 130px;
+    margin-top: 45px;
+}
+
+.form-label{
+    font-size: 20px;
+    color: #525050;
+    margin-left: 15px;
+}
+
+.input-box{
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 18px 0px;
+    font-size: large;
+    font-family: 'Merriweather', serif;
+    padding-left: 20px;
+}
+
+
+.text-fade{
+    font-size: 15px;
+    color: rgb(107, 104, 104);
+    font-family: 'Merriweather', serif;
+}
+
+.fade{
+    margin-left: 25%;
+    margin-top: 1%;
+}
+
+.sign{
+    color: blue;
+    text-decoration: underline;
+}
+
+.sign:hover{
+    cursor: pointer;
+}
+
+.btn-groupr{
+    margin-left: 40%;
+    margin-top: -60px;
+}
+
+.btnr{
+    font-size: 20px;
+    height: 50px;
+    width: 125px;
+    border-radius: 20px;
+    border: 4px solid white;
+    font-family: 'Merriweather', serif;
+}
+
+.btnr:hover{
+    background-color: palegreen;
+    color: white;
+    cursor: pointer;
+}
+

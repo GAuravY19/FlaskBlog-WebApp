@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class='form-container'>
+        <form action="" method='POST'>
+            {{form.hidden_tag()}}
+            <label class="FormLabel"> Create Post </label>
+            <section class='formfields'>
+                <main class='form-title'>
+
+                    {% if form.title.errors %}
+                        {{ form.title(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.title.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.title(class='input-box', placeholder='Title')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-content'>
+                    {% if form.content.errors %}
+                        {{ form.content(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.content.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.content(class='input-box new', placeholder='Content')}}
+                    {% endif %}
+                </main>
+
+            </section>
+            <div class='btn-group'>
+                {{form.submit(class='btn')}}
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}

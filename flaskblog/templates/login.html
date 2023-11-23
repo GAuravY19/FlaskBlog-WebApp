@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+    <div class='form-container-loginpage'>
+        <form action="" method='POST'>
+            {{form.hidden_tag()}}
+            <section class='formfields-login'>
+
+                <main class='form-email'>
+                 {% if form.email.errors %}
+                        {{ form.email(class='error input-box')}}
+                        <div class='error-box'>
+                            {% for error in form.email.errors %}
+                                <span class='error-text'> {{ error }} </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.email(class='input-box', placeholder='Email')}}
+                    {% endif %}
+
+                </main>
+
+                <main class='form-password'>
+                    {% if form.password.errors %}
+                        {{ form.password(class='error input-box')}}
+                        <div class='error-box'>
+                            {% for error in form.password.errors %}
+                                <span class='error-text'> {{ error }} </span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.password(class='input-box', placeholder='Password')}}
+                    {% endif %}
+
+                </main>
+
+                <main class='remember'>
+                    {{form.remember()}}
+                    {{form.remember.label(class='rem')}}
+                </main>
+
+            </section>
+
+            <div class='btn-group-login'>
+                {{form.submit(class='btn-login')}}
+            </div>
+        </form>
+    </div>
+    <div class='fade-login'>
+        <small class='text-fade-login'>Need an Account?<a href='#' class='sign'> Sign Up </a></small>
+    </div>
+
+
+{% endblock %}

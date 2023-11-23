@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300&family=Poppins:wght@300&family=Quicksand:wght@500&display=swap');
+/* font-family: 'Lora', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-container-loginpage{
+    height: 350px;
+    width: 45%;
+    background-color: rgb(251, 152, 152);
+    margin-left: 28%;
+    margin-top: 10%;
+    border: 2px solid white;
+    border-radius: 20px
+}
+
+.formfields-login{
+    height: 225px;
+    width: 500px;
+    margin-left: 96px;
+    margin-top: 27px;
+}
+
+.input-box{
+    height: 40px;
+    width: 380px;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin: 20px -100px;
+    font-size: large;
+    padding-left: 20px;
+}
+
+
+.text-fade-login{
+    font-size: 15px;
+    color: rgb(107, 104, 104);
+}
+
+.fade-login{
+    margin-left: 30%;
+    margin-top: 1%;
+}
+
+.sign{
+    color: blue;
+    text-decoration: underline;
+}
+
+.sign:hover{
+    cursor: pointer;
+}
+
+.btn-group-login{
+    margin-left: 17%;
+    margin-top: -10px;
+}
+
+.btn-login{
+    font-size: 20px;
+    height: 55px;
+    width: 125px;
+    border-radius: 10px;
+    border: 4px solid white;
+    font-family: 'Lora', serif;
+}
+
+.remember{
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+.btn-login:hover{
+    background-color: rgb(179, 241, 112);
+    cursor: pointer;
+    color:white;
+}
+
+.rem{
+    font-family: 'Lora', serif;
+}
+
+

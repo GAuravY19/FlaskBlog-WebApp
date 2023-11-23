@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/register.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/new_post.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/account.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/login.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/register.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/new_post.css')}}">
+        <link rel="stylesheet" href = "{{url_for('static', filename='css/post.css')}}">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="brandnames">
+                <div class="brandimg">
+                    <img src="{{url_for('static', filename='images/nav.webp')}}" alt="Brand Image">
+                </div>
+                <div class='brandname'>
+                    <p class="brandtext"> Blog App </p>
+                </div>
+            </div>
+            <div class="Linknames">
+                <ul class='navlink'>
+                    <li>
+                        <a href="{{url_for('home')}}">
+                            <p class='linktexts'> Home </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class='linktexts'> About Us </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class='linktexts'> Contact Us </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('new_posts')}}">
+                            <p class='linktexts'> New Post </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class='rightbar'>
+                <ul class='navlink rightnav'>
+                    <li>
+                        {% if current_user.is_authenticated %}
+                        <a href="{{url_for('logout')}}">
+                            <p class='linktexts'> Logout </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('account')}}">
+                            <p class='linktexts'> Profile </p>
+                        </a>
+
+                        {% else %}
+                        <a href="{{url_for('login')}}">
+                            <p class='linktexts'> Log In </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('register')}}">
+                            <p class='linktexts'> Sign Up </p>
+                        </a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        {% with messages = get_flashed_messages(with_categories = true)%}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class='alert alert-{{category}}'>
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}
+        {% endblock content %}
+
+        <footer class="footer">
+            <div class="watermark">&copy; 2023. Gaurav Yadav</div>
+            <button> Created With Flask </button>
+        </footer>
+
+        <script src=""></script>
+    </body>
+</html>

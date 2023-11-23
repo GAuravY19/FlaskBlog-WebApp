@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300&family=Quicksand:wght@500&display=swap');
+/* font-family: 'Merriweather', serif; */
+/* font-family: 'Quicksand', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(236, 228, 228);
+}
+
+.Postbox{
+    background: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(10px);
+    height: auto;
+    width: 55%;
+    margin-left: 21%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: white;
+}
+
+.Postbox .Posttitle{
+    font-size: 30px;
+    padding: 25px 65px 0;
+    font-family: 'Merriweather', serif;
+}
+
+
+.Postbox .authinfo .Postauthor{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    padding: 12px 65px 0;
+}
+
+.Postbox .Content{
+    font-size: 20px;
+    padding: 25px 0 20px 65px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn-outline-next{
+    background-color: red;
+    font-size: 30px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin: 0 1px;
+
+}
+
+.btn-next{
+    font-size: 30px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    margin: 0 1px;
+}
+
+.next-box{
+    margin-left: 22%;
+}

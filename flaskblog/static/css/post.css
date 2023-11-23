@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.button{
+    height: 50px;
+    width: 220px;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.btns{
+    font-size: 20px;
+    height: 20px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    background-color: red;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+.green{
+    background-color: greenyellow;
+}

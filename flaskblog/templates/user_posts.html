@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <h1 class='cntxt'> Posts by {{user.username }} ({{posts.total}})</h1>
+{% for post in posts.items%}
+    <div class="Postbox">
+        <div class='authinfo'>
+            <div class='Postauthor'>
+                <a href="#">{{post.author.username}}</a> on
+                {{post.date_posted.strftime('%Y-%m-%d')}}
+            </div>
+        </div>
+        <hr>
+        <div class="Posttitle">
+            <a href="{{url_for('posts', post_id = post.id)}}">{{post.title}}</a>
+        </div>
+        <div class='Content'>
+            {{post.content}}
+        </div>
+    </div>
+{% endfor %}
+
+<br>
+
+<div class='next-box'>
+{% for pagenum in posts.iter_pages() %}
+    {% if pagenum %}
+        {% if pagenum == posts.page %}
+            <a href="{{url_for('user_posts', username = user.username,page = posts.page)}}" class='btn-outline-next'>{{pagenum}}</a>
+        {% else %}
+            <a href="{{url_for('user_posts', username = user.username,page = posts.page)}}" class='btn-next'>{{pagenum}}</a>
+        {% endif %}
+    {% else %}
+    ....
+    {% endif %}
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

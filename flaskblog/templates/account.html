@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+    <div class='container'>
+        <div class='content'>
+            <div class="profile-pic">
+                <img alt='' src="{{image_url}}">
+            </div>
+
+            <div class='user-profile'>
+                <div class='username'>
+                    <p class='text'>{{current_user.username}}</p>
+                </div>
+                <div class='email'>
+                    <p class='text'>{{current_user.email}}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <hr>
+        <form action="" method='POST' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            <label class="FormLabela">Update Your Profile</label>
+            <section class='formfields'>
+                <main class='form-username'>
+
+                    {% if form.username.errors %}
+                        {{ form.username(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.username.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.username(class='input-box', placeholder='Username')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-email'>
+                    {% if form.email.errors %}
+                        {{ form.email(class = 'error input-box')}}
+                            <div class='error-box'>
+                                {% for error in form.email.errors %}
+                                    <span class='error-text'> {{ error }} </span>
+                                {% endfor %}
+                            </div>
+                    {% else %}
+                        {{form.email(class='input-box', placeholder='Email')}}
+                    {% endif %}
+                </main>
+
+                <main class='form-picture'>
+                    {{ form.picture.label(class="label")}}
+                    <br>
+                    <br>
+                    {{form.picture(class='input-box-file')}}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class='text-error'>{{error}}</span>
+                        {% endfor %}
+                    {% endif %}
+                </main>
+                <div class='btn-groups'>
+                    {{form.submit(class='btna')}}
+                </div>
+
+            </section>
+
+        </form>
+    </div>
+{% endblock %}

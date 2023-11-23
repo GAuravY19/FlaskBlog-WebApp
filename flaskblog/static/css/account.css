@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300&family=Poppins:wght@300&family=Quicksand:wght@500&family=Roboto+Condensed:wght@300&display=swap');
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.profile-pic img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.profile-pic img:hover{
+    cursor: pointer;
+}
+
+.profile-pic{
+    padding-top: 70px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container{
+    background-color: paleturquoise;
+    height: 700px;
+    width: 50%;
+    margin-left: 24%;
+    margin-top: 2%;
+    border-radius: 20px;
+    border: 4px solid white;
+}
+
+.text{
+    font-size: 35px;
+    padding: 20px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.username{
+    padding-top: 50px;
+}
+
+.btn-groups{
+    margin-top: 10px;
+}
+
+.btna{
+    font-size: 20px;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    height: 50px;
+    width: 125px;
+    border-radius: 10px;
+    border: 4px solid white;
+    font-family: 'Lora', serif;
+    text-align: center;
+    background-color: palegreen;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.input-box{
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 18px 0px;
+    font-size: large;
+    font-family: 'Merriweather', serif;
+    padding-left: 20px;
+}
+
+.form-container{
+    height: 500px;
+    width: 50%;
+    background-color: rgb(251, 152, 152);
+    margin-left: 23%;
+    margin-top: 8%;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.FormLabela{
+    font-size: 35px;
+    display: block;
+    margin-left: 27%;
+    margin-top: 20px;
+    font-family: system-ui;
+}
+
+.formfields{
+    height: 400px;
+    width: 500px;
+    margin-left: 130px;
+    margin-top: 5px;
+}
+
+.form-label{
+    font-size: 20px;
+    color: #525050;
+    margin-left: 15px;
+}
+
+.FormLabel{
+    font-size: 35px;
+    display: block;
+    margin-left: 27%;
+    font-family: system-ui;
+    color: dimgrey;
+}
+
+.label{
+    font-size: 20px;
+}
+
+.input-box-file{
+    height: 40px;
+    width: 400px;
+    font-size: large;
+    font-family: 'Merriweather', serif;
+}
+
+
+
+
+
