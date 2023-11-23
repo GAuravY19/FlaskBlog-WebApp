@@ -1,14 +1,11 @@
 {% extends "layout.html" %}
 
-
-
 {% block content %}
 
     <div class='form-container-loginpage'>
         <form action="" method='POST'>
             {{form.hidden_tag()}}
             <section class='formfields-login'>
-
                 <main class='form-email'>
                  {% if form.email.errors %}
                         {{ form.email(class='error input-box')}}
@@ -20,7 +17,6 @@
                     {% else %}
                         {{form.email(class='input-box', placeholder='Email')}}
                     {% endif %}
-
                 </main>
 
                 <main class='form-password'>
@@ -34,14 +30,12 @@
                     {% else %}
                         {{form.password(class='input-box', placeholder='Password')}}
                     {% endif %}
-
                 </main>
 
                 <main class='remember'>
                     {{form.remember()}}
                     {{form.remember.label(class='rem')}}
                 </main>
-
             </section>
 
             <div class='btn-group-login'>
@@ -52,6 +46,5 @@
     <div class='fade-login'>
         <small class='text-fade-login'>Need an Account?<a href='#' class='sign'> Sign Up </a></small>
     </div>
-
 
 {% endblock %}

@@ -1,17 +1,13 @@
 {% extends "layout.html" %}
 
-
-
 {% block content %}
 
     <div class='form-container'>
         <form action="" method='POST'>
             {{form.hidden_tag()}}
-            <!--<label class="FormLabel"> Join Today </label>-->
             <section class='formfields'>
                 <main class='form-username'>
-
-                    {% if form.username.errors %}
+                   {% if form.username.errors %}
                         {{ form.username(class = 'error input-box')}}
                             <div class='error-box'>
                                 {% for error in form.username.errors %}
@@ -71,7 +67,5 @@
     <div class='fade'>
         <small class='text-fade'>Already have an Account?<a href='#' class='sign'> Sign In </a></small>
     </div>
-
-
 
 {% endblock %}

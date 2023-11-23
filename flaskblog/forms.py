@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
-from flask_login import current_user
 from flask_wtf.file import FileAllowed, FileField
 from wtforms.validators import DataRequired, EqualTo, Length, Email, ValidationError
 from flaskblog.models import User
+from flask_login import current_user
+
 
 class RegisterationForm(FlaskForm):
     username = StringField("Username : ", validators=[DataRequired(), Length(min = 2, max = 20)])
@@ -26,13 +27,11 @@ class RegisterationForm(FlaskForm):
             raise ValidationError('Email already Exists! Please try another.')
 
 
-
 class LoginForm(FlaskForm):
     email = StringField('Email : ', validators=[DataRequired(), Email()])
     password = PasswordField('Password : ',validators=[DataRequired()])
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
-
 
 
 class ProfileUpdate(FlaskForm):
@@ -48,14 +47,12 @@ class ProfileUpdate(FlaskForm):
             if name:
                 raise ValidationError('Username already Exists! Please try another')
 
-
     def validate_email(self, email):
         if email.data != current_user.email:
             email = User.query.filter_by(email = email.data).first()
 
             if email:
                 raise ValidationError('Email already Exists! Please try another.')
-
 
 
 class NewPosts(FlaskForm):

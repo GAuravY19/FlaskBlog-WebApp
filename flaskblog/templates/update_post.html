@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+
 {% block content %}
 
     <div class='form-container'>
@@ -7,7 +8,6 @@
             <label class="FormLabel"> Create Post </label>
             <section class='formfields'>
                 <main class='form-title'>
-
                     {% if form.title.errors %}
                         {{ form.title(class = 'error input-box')}}
                             <div class='error-box'>
@@ -32,13 +32,11 @@
                         {{form.content(class='input-box new', placeholder='Content')}}
                     {% endif %}
                 </main>
-
             </section>
             <div class='btn-group'>
                 {{form.submit(class='btn')}}
             </div>
         </form>
     </div>
-
 
 {% endblock %}

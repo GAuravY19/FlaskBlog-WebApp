@@ -9,6 +9,7 @@ app.config['SECRET_KEY'] = 'c31f7cbeec8acf4bc418189acb0fd41e366f0bef75e479049739
 app.app_context().push()
 
 bcrypt = Bcrypt(app)
+
 loginmanager = LoginManager(app)
 loginmanager.login_view = 'login'
 loginmanager.login_message_category = 'danger'

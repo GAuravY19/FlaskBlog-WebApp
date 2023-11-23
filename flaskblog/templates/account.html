@@ -1,7 +1,5 @@
 {% extends "layout.html" %}
 
-
-
 {% block content %}
     <div class='container'>
         <div class='content'>
@@ -18,11 +16,13 @@
                 </div>
             </div>
         </div>
+
         <br>
         <br>
         <br>
 
         <hr>
+
         <form action="" method='POST' enctype='multipart/form-data'>
             {{form.hidden_tag()}}
             <label class="FormLabela">Update Your Profile</label>
@@ -68,9 +68,7 @@
                 <div class='btn-groups'>
                     {{form.submit(class='btna')}}
                 </div>
-
             </section>
-
         </form>
     </div>
 {% endblock %}

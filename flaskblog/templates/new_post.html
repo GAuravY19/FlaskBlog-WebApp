@@ -7,7 +7,6 @@
             <label class="FormLabel"> Create Post </label>
             <section class='formfields'>
                 <main class='form-title'>
-
                     {% if form.title.errors %}
                         {{ form.title(class = 'error input-box')}}
                             <div class='error-box'>
@@ -34,6 +33,7 @@
                 </main>
 
             </section>
+
             <div class='btn-group-post'>
                 {{form.submit(class='btn-post')}}
             </div>
